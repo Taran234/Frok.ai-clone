@@ -2,22 +2,197 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+html {
+  font-size: 0.9rem;
+  color: rgb(255, 255, 255);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color-scheme: light;
+}
+
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: black;
+  background-color: #121212;
+  transition: background-color 200ms ease-in-out 0s;
+  height: 100vh;
 }
 
-a {
-  color: inherit;
+header {
+  position: absolute;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.whole-container {
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+#__next {
+  width: 100%;
+  height: 100%;
+
+}
+
+.logo-container {
+  display: flow-root;
+}
+
+.logo {
+  font-size: 3rem;
+  padding: 2.5vh;
+  padding-top: 2vh;
+  margin: 1vh;
+  overflow: hidden;
+}
+
+
+.main-container {
+  position: relative;
+  padding: 2vh;
+  margin: 2vh;
+  margin-top: 10vh;
+}
+
+.bg-text-container {
+  white-space: pre;
+  background-color: rgba(0, 0, 0, 0);
+
+  padding: 20px;
+
+}
+
+.bg-text {
+  overflow: hidden;
+  opacity: 0.55;
+  color: rgb(237, 238, 240);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.lnk {
+  width: 100%;
+  max-width: 768px;
+  background-color: rgb(61, 61, 61);
+  color: rgb(184, 184, 184);
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Supply Sans", sans-serif;
+  min-width: 200px;
+  position: relative;
+}
+
+.lnk-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0.5rem;
+  flex-grow: 1;
+}
+
+.lnk-desc {
+  font-size: 0.8rem;
+  padding-top: 0.25rem;
+  color: rgb(153, 153, 153);
+  white-space: nowrap;
+}
+
+.big-container {
+  position: absolute;
+  width: 100%;
+  display: grid;
+  z-index: 99;
+  padding: 2vh;
+  align-content: space-evenly;
+  justify-items: center;
+}
+
+.buttons-container {
+  border: 2px solid rgb(51, 51, 51);
+  color: rgb(51, 51, 51);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 80%;
+  min-width: 200px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.transparent-container {
+  opacity: 0.05;
+  font-family: "Supply Sans", sans-serif;
+  color: rgb(237, 238, 240);
+  font-size: calc(20vh);
+  user-select: none;
+}
+
+.transparent-text {
+  transform: translate(-2vh, -4vh);
+}
+
+footer {
+  width: 100%;
+  display: inline-block;
+  z-index: 99;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 2rem;
+  gap: 1rem;
+}
+
+nav a {
+  text-transform: uppercase;
+  font-size: 2rem;
+  width: fit-content;
+}
+
+.nav-link {
+  color: rgb(237, 238, 240);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 0.25rem;
+  cursor: pointer;
   text-decoration: none;
 }
 
+
 * {
   box-sizing: border-box;
+  scrollbar-width: none;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .g327 {
