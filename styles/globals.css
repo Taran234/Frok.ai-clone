@@ -164,15 +164,26 @@ nav {
   display: flex;
   flex-direction: row;
   width: 100%;
-  font-size: 2rem;
-  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
 }
 
 nav a {
   text-transform: uppercase;
-  font-size: 2rem;
-  width: fit-content;
+  font-size: 1rem;
 }
+
+/* Media query for screens larger than 768px */
+@media (min-width: 768px) {
+  nav a {
+    font-size: 0.8rem;
+    /* Larger font size for larger screens */
+  }
+}
+
+
+
 
 .nav-link {
   color: rgb(237, 238, 240);
